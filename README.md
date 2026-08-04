@@ -72,8 +72,10 @@ Primera vez:
 3. `npm run deploy`.
 4. En el panel de Cloudflare, **Workers & Pages → web-personal → Domains & Routes**,
    conecta tu dominio.
-5. Actualiza `site.url` en `content/site.ts` con la URL definitiva: la usan el sitemap,
-   las etiquetas canónicas y la imagen para compartir.
+5. En `content/site.ts`, pon `url` con la URL definitiva y `indexable: true`.
+   Hasta entonces el sitio pide a los buscadores que no lo indexen, para que la URL
+   temporal de `workers.dev` no acabe compitiendo con tu dominio en Google.
+   Después vuelve a desplegar con `npm run deploy`.
 
 Para probar en local con envío de correo real: copia `.dev.vars.example` a `.dev.vars`
 y pon ahí tu `RESEND_API_KEY`.

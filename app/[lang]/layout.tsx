@@ -65,7 +65,8 @@ export async function generateMetadata({
       title: dict.meta.title,
       description: dict.meta.description,
     },
-    robots: { index: true, follow: true },
+    // Ver `site.indexable`: no se indexa hasta estar en el dominio definitivo.
+    robots: { index: site.indexable, follow: site.indexable },
   };
 }
 

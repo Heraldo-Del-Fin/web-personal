@@ -12,8 +12,21 @@ export const site = {
   /** Iniciales del logo. */
   initials: "LS",
 
-  /** URL final del sitio (sin barra al final). Necesaria para SEO y OG. */
-  url: "https://luisserrato.dev",
+  /**
+   * URL donde vive el sitio, sin barra al final. La usan el sitemap, las
+   * etiquetas canónicas y la imagen para compartir, así que tiene que ser la
+   * real o las vistas previas de WhatsApp y LinkedIn saldrán vacías.
+   * Cámbiala en cuanto conectes tu dominio.
+   */
+  url: "https://web-personal.serato14luis.workers.dev",
+
+  /**
+   * Ponlo en `true` SOLO cuando el sitio esté en su dominio definitivo y con
+   * contenido real. Mientras sea `false` se pide a los buscadores que no
+   * indexen: así Google no registra esta URL temporal de workers.dev, que
+   * después competiría con tu dominio como contenido duplicado.
+   */
+  indexable: false,
 
   email: "serato14luis@gmail.com",
 
