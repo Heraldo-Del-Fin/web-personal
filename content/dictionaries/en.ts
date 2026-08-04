@@ -21,10 +21,10 @@ export const en: Dictionary = {
   },
   hero: {
     available: "Available for new projects",
-    titleLead: "Websites that",
-    titleHighlight: "sell for you",
+    titleLead: "Custom software to",
+    titleHighlight: "grow your business",
     subtitle:
-      "I design and build fast, polished websites made to turn visitors into customers. From the first sketch to launch day, with no generic templates.",
+      "I design and build websites, mobile apps, desktop software and business management systems (inventory, administration and process control). From the idea to a working product, with no generic templates.",
     ctaPrimary: "Tell me about your project",
     ctaSecondary: "See my work",
     stats: [
@@ -33,7 +33,7 @@ export const en: Dictionary = {
       { value: "<24h", label: "response time" },
     ],
     whatsappMessage:
-      "Hi Luis! I found your portfolio and I'd like to talk about a web project.",
+      "Hi Luis! I found your portfolio and I'd like to talk about a project.",
   },
   marquee: {
     label: "Tools I work with",
@@ -67,7 +67,7 @@ export const en: Dictionary = {
       {
         title: "Discovery",
         description:
-          "A 30-minute call to understand your business, your customers and what the site needs to achieve.",
+          "A 30-minute call to understand your business, how you work today and what the project needs to solve.",
       },
       {
         title: "Proposal and design",
@@ -77,12 +77,12 @@ export const en: Dictionary = {
       {
         title: "Development",
         description:
-          "I build the site with visible progress every week on a preview link, so nothing is a surprise at the end.",
+          "I build it with visible progress every week on a preview version you can actually use, so nothing is a surprise at the end.",
       },
       {
-        title: "Launch and support",
+        title: "Delivery and support",
         description:
-          "I ship it, measure speed and SEO, and hand everything over documented. Includes 30 days of free tweaks.",
+          "I ship or install it, check it works under real conditions, and hand over the code and the documentation. Includes 30 days of free tweaks.",
       },
     ],
   },
@@ -90,8 +90,8 @@ export const en: Dictionary = {
     label: "About",
     title: "Hi, I'm Luis",
     paragraphs: [
-      "I've spent several years building web products for businesses that need more than a template. I take on the whole project: understanding the goal, designing the experience and writing the code behind it.",
-      "I work mostly with React, Next.js and TypeScript, and I care a lot about performance and accessibility. A beautiful site that loads slowly is worth nothing.",
+      "I've spent several years building software for businesses that need more than a template or a shared spreadsheet. I take on the whole project: understanding how you work today, designing the solution and writing the code behind it.",
+      "On the web I work with React, Next.js and Vue; on mobile with React Native; on desktop with Electron and Node.js. I care a lot about performance and about interfaces that follow how people actually work: a tool that gets in the way is a tool nobody uses.",
       "If you have an idea and don't know where to start, drop me a line. The first call is free and comes with no strings attached.",
     ],
     stackLabel: "Everyday toolkit",
@@ -106,14 +106,14 @@ export const en: Dictionary = {
     title: "Before you write",
     items: [
       {
-        question: "How much does a website cost?",
+        question: "How much does a project cost?",
         answer:
-          "It depends on scope. A well-built landing page usually starts at USD 600, and a custom site with an admin panel at USD 2,500. After our first call I send a fixed price with no hidden costs.",
+          "It depends on scope: a website is not the same as an inventory system with several user roles. On our first call I work out what you need and send a fixed price, with no hidden costs and no surprises halfway through.",
       },
       {
         question: "How long does a project take?",
         answer:
-          "A landing page takes one to two weeks. A corporate site or a store, three to six weeks. The date is agreed before we start and I stick to it.",
+          "A website usually takes one to two weeks. A mobile app or a management system, four to ten weeks depending on what it includes. The date is agreed before we start and I stick to it.",
       },
       {
         question: "Do you work with clients abroad?",
@@ -121,14 +121,14 @@ export const en: Dictionary = {
           "Yes. I work remotely with clients across LATAM, Spain and the US. We coordinate over video calls and WhatsApp, and I adapt to your time zone.",
       },
       {
-        question: "Can I edit the content myself afterwards?",
+        question: "Can I manage the content myself afterwards?",
         answer:
-          "Yes. I can hook up a content manager so you edit text and images without touching code, or keep the copy in simple files if you prefer something lighter.",
+          "Yes. On websites I can hook up a content manager so you edit text and images without touching code, and on management systems the admin dashboard is part of the project.",
       },
       {
         question: "What do you need from me to start?",
         answer:
-          "Your copy and images if you already have them, references of sites you like, and clarity on what you want visitors to do. If something is missing, I'll help you define it.",
+          "Tell me how the thing you want to solve works today, who will use it, and what should change once it's ready. Copy, images or references you like are welcome; if something is missing, I'll help you define it.",
       },
       {
         question: "Do you offer maintenance after launch?",
@@ -143,7 +143,7 @@ export const en: Dictionary = {
     subtitle:
       "Reach out however you prefer. I reply within 24 business hours.",
     whatsappCta: "Message on WhatsApp",
-    whatsappMessage: "Hi Luis! I'd like to get a quote for a web project.",
+    whatsappMessage: "Hi Luis! I'd like to get a quote for a project.",
     emailCta: "Send an email",
     bookingCta: "Book a call",
     responseTime: "Reply within 24 h",
@@ -195,7 +195,7 @@ export const en: Dictionary = {
     ctaButton: "Let's talk about your project",
   },
   footer: {
-    tagline: "Web design and development for businesses that want to grow.",
+    tagline: "Custom software for businesses that want to grow.",
     navTitle: "Navigation",
     contactTitle: "Contact",
     socialTitle: "Social",
@@ -203,9 +203,9 @@ export const en: Dictionary = {
     backToTop: "Back to top",
   },
   meta: {
-    title: "Luis Daniel Serrato · Freelance web development",
+    title: "Luis Daniel Serrato · Custom software development",
     description:
-      "I design and build fast websites made to turn visitors into customers. Landing pages, custom web apps and online stores.",
+      "I build websites, mobile apps, desktop software and business management systems: inventory, administration and process control.",
     projectsTitle: "Work",
   },
 };

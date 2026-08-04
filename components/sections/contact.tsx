@@ -24,7 +24,7 @@ export function Contact({ locale, dict }: { locale: Locale; dict: Dictionary }) 
               href={whatsappLink(dict.contact.whatsappMessage)}
               icon="whatsapp"
               label={dict.contact.whatsappCta}
-              detail={`+${site.whatsapp}`}
+              detail={site.whatsappDisplay}
               external
             />
             <ContactLink

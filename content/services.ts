@@ -1,6 +1,6 @@
 import type { Localized } from "@/lib/i18n";
 
-export type IconName = "rocket" | "code" | "cart" | "gauge";
+export type IconName = "rocket" | "code" | "smartphone" | "monitor";
 
 export type Service = {
   id: string;
@@ -9,7 +9,11 @@ export type Service = {
   description: Localized;
   /** Viñetas de lo que entregas. Tres o cuatro funcionan mejor visualmente. */
   deliverables: Localized<string[]>;
-  /** Pon `null` para ocultar el precio de esta tarjeta. */
+  /**
+   * Precio de referencia. Con `null` la tarjeta no muestra precio.
+   * Están todos en `null` hasta que definas tus tarifas reales: anunciar un
+   * precio que no es el tuyo te obliga a sostenerlo o a desdecirte.
+   */
   priceFrom: Localized | null;
   /** Marca una sola como destacada: se resalta con el color de acento. */
   featured?: boolean;
@@ -19,10 +23,10 @@ export const services: Service[] = [
   {
     id: "landing",
     icon: "rocket",
-    title: { es: "Landing pages", en: "Landing pages" },
+    title: { es: "Páginas web", en: "Websites" },
     description: {
-      es: "Una página enfocada en un solo objetivo: que el visitante te escriba, reserve o compre.",
-      en: "A single page built around one goal: getting the visitor to write, book or buy.",
+      es: "Sitios y landing pages enfocados en un objetivo: que el visitante te escriba, reserve o compre.",
+      en: "Sites and landing pages built around one goal: getting the visitor to write, book or buy.",
     },
     deliverables: {
       es: [
@@ -38,99 +42,92 @@ export const services: Service[] = [
         "Launch and analytics setup",
       ],
     },
-    priceFrom: { es: "600 USD", en: "USD 600" },
+    priceFrom: null,
   },
   {
     id: "web-app",
     icon: "code",
     title: {
-      es: "Aplicaciones web a medida",
-      en: "Custom web applications",
+      es: "Sistemas de gestión empresarial",
+      en: "Business management systems",
     },
     description: {
-      es: "Paneles, reservas, portales de clientes. Software hecho para cómo trabaja tu negocio.",
-      en: "Dashboards, bookings, client portals. Software shaped around how your business works.",
+      es: "Inventario, administración y control de procesos. Software hecho para cómo trabaja tu negocio, no al revés.",
+      en: "Inventory, administration and process control. Software shaped around how your business works, not the other way round.",
     },
     deliverables: {
       es: [
         "Arquitectura y base de datos",
         "Autenticación y roles de usuario",
-        "Panel de administración",
+        "Panel de administración y reportes",
         "Documentación y traspaso del código",
       ],
       en: [
         "Architecture and database",
         "Authentication and user roles",
-        "Admin dashboard",
+        "Admin dashboard and reports",
         "Documentation and code handover",
       ],
     },
-    priceFrom: { es: "2 500 USD", en: "USD 2,500" },
+    priceFrom: null,
     featured: true,
   },
   {
-    id: "ecommerce",
-    icon: "cart",
-    title: { es: "Tiendas en línea", en: "Online stores" },
+    id: "mobile",
+    icon: "smartphone",
+    title: { es: "Aplicaciones móviles", en: "Mobile applications" },
     description: {
-      es: "Vende sin depender de plantillas lentas ni comisiones que se comen tu margen.",
-      en: "Sell without slow templates or commissions eating into your margin.",
+      es: "Apps para Android/iOS enfocadas en resolver una operación específica de tu negocio.",
+      en: "Android/iOS apps focused on solving one specific operation of your business.",
     },
     deliverables: {
       es: [
-        "Catálogo y carrito",
-        "Pagos con Stripe o Mercado Pago",
-        "Gestión de pedidos e inventario",
-        "Correos automáticos de compra",
+        "Backend y base de datos si el proyecto lo requiere",
+        "Panel de administración si aplica",
+        "Publicación en tiendas si se necesita",
       ],
       en: [
-        "Catalog and cart",
-        "Payments with Stripe or Mercado Pago",
-        "Order and inventory management",
-        "Automated purchase emails",
+        "Backend and database if the project needs it",
+        "Admin dashboard where it applies",
+        "Store publishing if required",
       ],
     },
-    priceFrom: { es: "1 800 USD", en: "USD 1,800" },
+    priceFrom: null,
   },
   {
-    id: "performance",
-    icon: "gauge",
-    title: {
-      es: "Rendimiento, SEO y mantenimiento",
-      en: "Performance, SEO and maintenance",
-    },
+    id: "desktop",
+    icon: "monitor",
+    title: { es: "Software de escritorio", en: "Desktop software" },
     description: {
-      es: "¿Ya tienes sitio pero carga lento o no aparece en Google? Lo audito y lo arreglo.",
-      en: "Already have a site that loads slowly or never shows up on Google? I audit it and fix it.",
+      es: "Aplicaciones de escritorio para gestión interna, control de procesos o consulta de información sin depender de internet.",
+      en: "Desktop applications for internal management, process control or looking up information without depending on the internet.",
     },
     deliverables: {
       es: [
-        "Auditoría técnica y de velocidad",
-        "Optimización de Core Web Vitals",
-        "SEO técnico y datos estructurados",
-        "Plan mensual de mantenimiento",
+        "Conexión con base de datos local o en la nube",
+        "Interfaz adaptada al flujo real de trabajo del negocio",
       ],
       en: [
-        "Technical and speed audit",
-        "Core Web Vitals optimisation",
-        "Technical SEO and structured data",
-        "Monthly maintenance plan",
+        "Connection to a local or cloud database",
+        "Interface shaped around how the business actually works",
       ],
     },
-    priceFrom: { es: "350 USD", en: "USD 350" },
+    priceFrom: null,
   },
 ];
 
-/** Se muestran en el carrusel bajo el hero. Edita libremente. */
+/** Se muestran en el carrusel bajo el hero y en tu sección personal. */
 export const stack = [
   "Next.js",
   "React",
+  "React Native",
+  "Vue",
   "TypeScript",
-  "Tailwind CSS",
   "Node.js",
+  "Electron",
+  "Tailwind CSS",
   "PostgreSQL",
   "Prisma",
-  "Stripe",
   "Figma",
-  "Vercel",
+  "Cloudflare",
 ];

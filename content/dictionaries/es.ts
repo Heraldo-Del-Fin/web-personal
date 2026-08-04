@@ -21,10 +21,10 @@ export const es: Dictionary = {
   },
   hero: {
     available: "Disponible para nuevos proyectos",
-    titleLead: "Sitios web que",
-    titleHighlight: "venden por ti",
+    titleLead: "Software a la medida para",
+    titleHighlight: "hacer crecer tu negocio",
     subtitle:
-      "Diseño y desarrollo páginas rápidas, cuidadas y pensadas para convertir visitas en clientes. Del primer boceto al sitio publicado, sin plantillas genéricas.",
+      "Diseño y desarrollo páginas web, aplicaciones móviles, software de escritorio y sistemas de gestión empresarial (inventario, administración y control de procesos). De la idea al producto funcionando, sin plantillas genéricas.",
     ctaPrimary: "Cuéntame tu proyecto",
     ctaSecondary: "Ver proyectos",
     stats: [
@@ -33,7 +33,7 @@ export const es: Dictionary = {
       { value: "<24h", label: "tiempo de respuesta" },
     ],
     whatsappMessage:
-      "¡Hola Luis! Vi tu portafolio y me gustaría platicar sobre un proyecto web.",
+      "¡Hola Luis! Vi tu portafolio y me gustaría hablar contigo sobre un proyecto.",
   },
   marquee: {
     label: "Tecnologías con las que trabajo",
@@ -67,7 +67,7 @@ export const es: Dictionary = {
       {
         title: "Descubrimiento",
         description:
-          "Una llamada de 30 minutos para entender tu negocio, tus clientes y qué necesitas conseguir con el sitio.",
+          "Una llamada de 30 minutos para entender tu negocio, cómo trabajas hoy y qué necesitas que resuelva el proyecto.",
       },
       {
         title: "Propuesta y diseño",
@@ -77,12 +77,12 @@ export const es: Dictionary = {
       {
         title: "Desarrollo",
         description:
-          "Construyo el sitio con avances visibles cada semana en un enlace de prueba, para que no haya sorpresas al final.",
+          "Lo construyo con avances visibles cada semana en una versión de prueba que puedes usar, para que no haya sorpresas al final.",
       },
       {
-        title: "Lanzamiento y soporte",
+        title: "Entrega y soporte",
         description:
-          "Publico, mido velocidad y SEO, y te dejo todo documentado. Incluye 30 días de ajustes sin costo.",
+          "Publico o instalo, verifico que todo funcione en condiciones reales y te dejo el código y el manejo documentados. Incluye 30 días de ajustes sin costo.",
       },
     ],
   },
@@ -90,8 +90,8 @@ export const es: Dictionary = {
     label: "Sobre mí",
     title: "Hola, soy Luis",
     paragraphs: [
-      "Llevo varios años construyendo productos web para negocios que necesitan algo mejor que una plantilla. Me involucro en el proyecto completo: entender el objetivo, diseñar la experiencia y escribir el código que la sostiene.",
-      "Trabajo sobre todo con React, Next.js y TypeScript, y cuido especialmente el rendimiento y la accesibilidad. Un sitio bonito que carga lento no sirve de nada.",
+      "Llevo varios años construyendo software para negocios que necesitan algo mejor que una plantilla o una hoja de cálculo compartida. Me involucro en el proyecto completo: entender cómo trabajas hoy, diseñar la solución y escribir el código que la sostiene.",
+      "En web trabajo con React, Next.js y Vue; en móvil con React Native; y en escritorio con Electron y Node.js. Cuido especialmente el rendimiento y que la interfaz siga el flujo real de trabajo: una herramienta que estorba, nadie la usa.",
       "Si tienes una idea en la cabeza y no sabes por dónde empezar, escríbeme. La primera llamada es gratis y sin compromiso.",
     ],
     stackLabel: "Herramientas del día a día",
@@ -106,14 +106,14 @@ export const es: Dictionary = {
     title: "Antes de escribirme",
     items: [
       {
-        question: "¿Cuánto cuesta una página web?",
+        question: "¿Cuánto cuesta un proyecto?",
         answer:
-          "Depende del alcance. Una landing page bien hecha suele empezar en 600 USD y un sitio a medida con panel de administración en 2 500 USD. Tras la primera llamada te envío un precio cerrado, sin costes ocultos.",
+          "Depende del alcance: no cuesta lo mismo una página web que un sistema de inventario con varios perfiles de usuario. En la primera llamada entiendo qué necesitas y te envío un precio cerrado, sin costes ocultos ni sorpresas a mitad del proyecto.",
       },
       {
         question: "¿Cuánto tarda el proyecto?",
         answer:
-          "Una landing page toma entre 1 y 2 semanas. Un sitio corporativo o una tienda, entre 3 y 6 semanas. La fecha se acuerda antes de empezar y la respeto.",
+          "Una página web suele tomar entre 1 y 2 semanas. Una aplicación móvil o un sistema de gestión, entre 4 y 10 semanas según lo que incluya. La fecha se acuerda antes de empezar y la respeto.",
       },
       {
         question: "¿Trabajas con clientes de otros países?",
@@ -121,14 +121,14 @@ export const es: Dictionary = {
           "Sí. Trabajo en remoto con clientes de LATAM, España y Estados Unidos. Nos coordinamos por videollamada y WhatsApp, y ajusto los horarios a tu zona.",
       },
       {
-        question: "¿Puedo editar el contenido yo mismo después?",
+        question: "¿Puedo administrar el contenido yo mismo después?",
         answer:
-          "Sí. Puedo conectar un gestor de contenidos para que edites textos e imágenes sin tocar código, o dejarte los textos en archivos simples si prefieres algo más ligero.",
+          "Sí. En las páginas web puedo conectar un gestor de contenidos para que edites textos e imágenes sin tocar código, y en los sistemas de gestión el panel de administración es parte del proyecto.",
       },
       {
         question: "¿Qué necesitas de mí para empezar?",
         answer:
-          "Tus textos e imágenes si ya los tienes, referencias de sitios que te gusten y claridad sobre qué quieres que haga el visitante. Si falta algo, te ayudo a definirlo.",
+          "Que me expliques cómo funciona hoy eso que quieres resolver, quién lo usará y qué esperas que cambie cuando esté listo. Si tienes textos, imágenes o referencias que te gusten, mejor; si falta algo, te ayudo a definirlo.",
       },
       {
         question: "¿Ofreces mantenimiento después del lanzamiento?",
@@ -143,8 +143,7 @@ export const es: Dictionary = {
     subtitle:
       "Escríbeme por el medio que prefieras. Respondo en menos de 24 horas hábiles.",
     whatsappCta: "Escribir por WhatsApp",
-    whatsappMessage:
-      "¡Hola Luis! Me gustaría cotizar un proyecto web contigo.",
+    whatsappMessage: "¡Hola Luis! Me gustaría cotizar un proyecto contigo.",
     emailCta: "Enviar un correo",
     bookingCta: "Agendar una llamada",
     responseTime: "Respuesta en menos de 24 h",
@@ -197,7 +196,7 @@ export const es: Dictionary = {
     ctaButton: "Hablemos de tu proyecto",
   },
   footer: {
-    tagline: "Diseño y desarrollo web para negocios que quieren crecer.",
+    tagline: "Software a la medida para negocios que quieren crecer.",
     navTitle: "Navegación",
     contactTitle: "Contacto",
     socialTitle: "Redes",
@@ -205,9 +204,9 @@ export const es: Dictionary = {
     backToTop: "Volver arriba",
   },
   meta: {
-    title: "Luis Daniel Serrato · Desarrollo web freelance",
+    title: "Luis Daniel Serrato · Desarrollo de software a la medida",
     description:
-      "Diseño y desarrollo sitios web rápidos y pensados para convertir visitas en clientes. Landing pages, aplicaciones a medida y tiendas en línea.",
+      "Desarrollo páginas web, aplicaciones móviles, software de escritorio y sistemas de gestión empresarial: inventario, administración y control de procesos.",
     projectsTitle: "Proyectos",
   },
 };

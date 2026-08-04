@@ -26,7 +26,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <span className="text-gradient">{dict.hero.titleHighlight}</span>
           </h1>
 
-          <p className="max-w-xl text-lg text-muted text-pretty sm:text-xl">
+          <p className="max-w-2xl text-lg text-muted text-pretty sm:text-xl">
             {dict.hero.subtitle}
           </p>
 

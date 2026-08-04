@@ -6,8 +6,8 @@ export const site = {
   name: "Luis Daniel Serrato",
   /** Aparece bajo tu nombre en el header y en el footer. */
   role: {
-    es: "Desarrollador web freelance",
-    en: "Freelance web developer",
+    es: "Desarrollador de software freelance",
+    en: "Freelance software developer",
   },
   /** Iniciales del logo. */
   initials: "LS",
@@ -30,8 +30,14 @@ export const site = {
 
   email: "serato14luis@gmail.com",
 
-  /** Solo dígitos, con código de país y sin +, espacios ni guiones. */
-  whatsapp: "5215512345678",
+  /**
+   * Solo dígitos, con código de país y sin +, espacios ni guiones.
+   * De aquí salen TODOS los enlaces wa.me del sitio.
+   */
+  whatsapp: "573017176409",
+
+  /** El mismo número, formateado para leerlo. Solo se muestra, no se enlaza. */
+  whatsappDisplay: "+57 301 717 6409",
 
   /** Ciudad o zona horaria que muestras en el footer. */
   location: {
