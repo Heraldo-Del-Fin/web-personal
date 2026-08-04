@@ -8,7 +8,7 @@ import { LOCALE_COOKIE, locales, segments, type Locale } from "@/lib/i18n";
 
 /**
  * Cambia de idioma conservando la página actual y recuerda la elección en una
- * cookie, para que `proxy.ts` respete el idioma elegido en las próximas visitas.
+ * cookie, que lee `app/route.ts` para respetar la elección en las próximas visitas.
  */
 export function LanguageSwitcher({
   locale,
@@ -65,7 +65,7 @@ export function LanguageSwitcher({
   );
 }
 
-/** Guarda el idioma elegido para que `proxy.ts` lo respete en la próxima visita. */
+/** Guarda el idioma elegido para que `app/route.ts` lo respete en la próxima visita. */
 function rememberLocale(target: Locale) {
   document.cookie = `${LOCALE_COOKIE}=${target};path=/;max-age=31536000;samesite=lax`;
 }

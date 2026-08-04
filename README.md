@@ -49,14 +49,38 @@ puede escribirte por WhatsApp o correo.
 
 ## Idiomas
 
-- Rutas: `/es` y `/en`. `proxy.ts` (el antiguo `middleware.ts` de Next 16) manda cada
-  visita a su idioma según la cookie `NEXT_LOCALE` y, si no la hay, según el navegador.
+- Rutas: `/es` y `/en`. `app/route.ts` manda cada visita de la raíz a su idioma según la
+  cookie `NEXT_LOCALE` y, si no la hay, según el `Accept-Language` del navegador.
 - Las URL de proyectos están traducidas: `/es/proyectos/...` y `/en/projects/...`
   apuntan a la misma página gracias al `rewrite` de `next.config.ts`.
 
-## Publicar
+## Publicar en Cloudflare Workers
 
-1. Sube el repositorio a GitHub e impórtalo en [Vercel](https://vercel.com/new).
-2. Añade la variable de entorno `RESEND_API_KEY` en el proyecto de Vercel.
-3. Conecta tu dominio y actualiza `site.url` con la URL definitiva
-   (la usan el sitemap, las etiquetas canónicas y la imagen para compartir).
+El sitio se despliega con [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare).
+El plan gratuito de Workers permite uso comercial (el plan Hobby de Vercel no).
+
+```bash
+npm run preview   # compila y sirve el Worker en local, en http://localhost:8787
+npm run deploy    # compila y publica en Cloudflare
+```
+
+Primera vez:
+
+1. `npx wrangler login` para conectar tu cuenta de Cloudflare.
+2. `npx wrangler secret put RESEND_API_KEY` y pega la clave (queda guardada en
+   Cloudflare, no en el repositorio).
+3. `npm run deploy`.
+4. En el panel de Cloudflare, **Workers & Pages → web-personal → Domains & Routes**,
+   conecta tu dominio.
+5. Actualiza `site.url` en `content/site.ts` con la URL definitiva: la usan el sitemap,
+   las etiquetas canónicas y la imagen para compartir.
+
+Para probar en local con envío de correo real: copia `.dev.vars.example` a `.dev.vars`
+y pon ahí tu `RESEND_API_KEY`.
+
+### Optimización de imágenes
+
+`next/image` usa el binding `IMAGES` declarado en `wrangler.jsonc`, que requiere activar
+**Transformations** en el panel de Cloudflare (el plan gratuito incluye 5 000 al mes).
+Si prefieres no activarlo, borra el bloque `images` de `wrangler.jsonc` y añade
+`images: { unoptimized: true }` en `next.config.ts`.

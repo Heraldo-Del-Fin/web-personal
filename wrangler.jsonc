@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "web-personal",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "web-personal"
+    }
+  ],
+  // Optimización de imágenes de `next/image` a través de Cloudflare Images.
+  // Requiere activar "Transformations" en el panel de Cloudflare (el plan
+  // gratuito incluye 5 000 al mes). Si prefieres no activarlo, borra este
+  // bloque y pon `images: { unoptimized: true }` en next.config.ts.
+  "images": {
+    "binding": "IMAGES"
+  }
+}

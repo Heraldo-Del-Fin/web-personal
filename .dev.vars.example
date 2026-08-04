@@ -1,0 +1,8 @@
+# Variables para la vista previa local del Worker (`npm run preview`).
+# Copia este archivo como `.dev.vars` (está en .gitignore).
+#
+# En producción NO se usa este archivo: las claves se guardan en Cloudflare con
+#   npx wrangler secret put RESEND_API_KEY
+
+NEXTJS_ENV=development
+RESEND_API_KEY=

@@ -7,7 +7,7 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "es";
 
-/** Cookie donde se recuerda el idioma elegido a mano en el selector. */
+/** Cookie donde se recuerda el idioma elegido a mano en el selector. La lee `app/route.ts`. */
 export const LOCALE_COOKIE = "NEXT_LOCALE";
 
 const dictionaries: Record<Locale, Dictionary> = { es, en };
