@@ -27,11 +27,8 @@ export const en: Dictionary = {
       "I design and build websites, mobile apps, desktop software and business management systems (inventory, administration and process control). From the idea to a working product, with no generic templates.",
     ctaPrimary: "Tell me about your project",
     ctaSecondary: "See my work",
-    stats: [
-      { value: "15+", label: "projects delivered" },
-      { value: "98", label: "average Lighthouse score" },
-      { value: "<24h", label: "response time" },
-    ],
+    /* Empty = the stats row is hidden. Mirror whatever you set in `es.ts`. */
+    stats: [],
     whatsappMessage:
       "Hi Luis! I found your portfolio and I'd like to talk about a project.",
   },

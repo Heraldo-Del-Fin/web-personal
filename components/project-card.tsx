@@ -21,9 +21,14 @@ export function ProjectCard({
       <ProjectThumb project={project} priority={priority} />
 
       <div className="flex flex-1 flex-col gap-4 p-7">
+        {/* El año es opcional: sin él no se pinta el separador. */}
         <div className="flex items-center gap-3 font-mono text-xs text-muted">
-          <span>{project.year}</span>
-          <span aria-hidden="true">·</span>
+          {project.year ? (
+            <>
+              <span>{project.year}</span>
+              <span aria-hidden="true">·</span>
+            </>
+          ) : null}
           <span>{project.client[locale]}</span>
         </div>
 
@@ -39,16 +44,18 @@ export function ProjectCard({
           <p className="text-muted text-pretty">{project.tagline[locale]}</p>
         </div>
 
-        <ul className="flex flex-wrap gap-2">
-          {project.stack.slice(0, 4).map((tech) => (
-            <li
-              key={tech}
-              className="rounded-full border border-border px-2.5 py-1 font-mono text-xs text-muted"
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
+        {project.stack.length > 0 ? (
+          <ul className="flex flex-wrap gap-2">
+            {project.stack.slice(0, 4).map((tech) => (
+              <li
+                key={tech}
+                className="rounded-full border border-border px-2.5 py-1 font-mono text-xs text-muted"
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         <span className="mt-auto inline-flex items-center gap-2 pt-2 text-sm font-medium text-fg">
           {dict.projects.viewCase}

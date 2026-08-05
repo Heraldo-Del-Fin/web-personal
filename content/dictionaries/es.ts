@@ -27,11 +27,14 @@ export const es: Dictionary = {
       "Diseño y desarrollo páginas web, aplicaciones móviles, software de escritorio y sistemas de gestión empresarial (inventario, administración y control de procesos). De la idea al producto funcionando, sin plantillas genéricas.",
     ctaPrimary: "Cuéntame tu proyecto",
     ctaSecondary: "Ver proyectos",
-    stats: [
-      { value: "+15", label: "proyectos entregados" },
-      { value: "98", label: "puntaje medio en Lighthouse" },
-      { value: "<24h", label: "tiempo de respuesta" },
-    ],
+    /*
+     * Cifras bajo el hero. Vacío = la fila no se muestra.
+     * Rellénalo cuando tengas datos que puedas sostener delante de un cliente:
+     *   { value: "+15", label: "proyectos entregados" },
+     *   { value: "<24h", label: "tiempo de respuesta" },
+     * Recuerda ponerlas también en `en.ts`.
+     */
+    stats: [],
     whatsappMessage:
       "¡Hola Luis! Vi tu portafolio y me gustaría hablar contigo sobre un proyecto.",
   },

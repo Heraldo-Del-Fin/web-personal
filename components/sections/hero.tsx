@@ -54,17 +54,20 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
         </Reveal>
 
-        <Reveal
-          delay={150}
-          className="mt-16 grid max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3"
-        >
-          {dict.hero.stats.map((stat) => (
-            <div key={stat.label} className="bg-bg/80 px-6 py-6 backdrop-blur">
-              <p className="font-mono text-3xl font-semibold text-fg">{stat.value}</p>
-              <p className="mt-1 text-sm text-muted">{stat.label}</p>
-            </div>
-          ))}
-        </Reveal>
+        {/* La fila de cifras no aparece si `hero.stats` está vacío en el diccionario. */}
+        {dict.hero.stats.length > 0 ? (
+          <Reveal
+            delay={150}
+            className="mt-16 grid max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3"
+          >
+            {dict.hero.stats.map((stat) => (
+              <div key={stat.label} className="bg-bg/80 px-6 py-6 backdrop-blur">
+                <p className="font-mono text-3xl font-semibold text-fg">{stat.value}</p>
+                <p className="mt-1 text-sm text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </Reveal>
+        ) : null}
       </Container>
     </section>
   );

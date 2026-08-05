@@ -72,8 +72,12 @@ export default async function ProjectPage({
 
         <div className="mt-8 flex flex-col gap-5">
           <div className="flex flex-wrap items-center gap-3 font-mono text-xs text-muted">
-            <span>{project.year}</span>
-            <span aria-hidden="true">·</span>
+            {project.year ? (
+              <>
+                <span>{project.year}</span>
+                <span aria-hidden="true">·</span>
+              </>
+            ) : null}
             <span>{project.client[lang]}</span>
           </div>
           <h1 className="text-display font-semibold text-balance">{project.name}</h1>
@@ -98,21 +102,24 @@ export default async function ProjectPage({
         </Reveal>
       </Container>
 
-      <Container className="pt-16">
-        <div className="grid gap-3 sm:grid-cols-3">
-          {project.metrics.map((metric) => (
-            <div
-              key={metric.value + metric.label[lang]}
-              className="rounded-2xl border border-border bg-surface px-6 py-6"
-            >
-              <p className="font-mono text-3xl font-semibold text-gradient">
-                {metric.value}
-              </p>
-              <p className="mt-1 text-sm text-muted">{metric.label[lang]}</p>
-            </div>
-          ))}
-        </div>
-      </Container>
+      {/* Sin cifras medidas, la franja no aparece. */}
+      {project.metrics.length > 0 ? (
+        <Container className="pt-16">
+          <div className="grid gap-3 sm:grid-cols-3">
+            {project.metrics.map((metric) => (
+              <div
+                key={metric.value + metric.label[lang]}
+                className="rounded-2xl border border-border bg-surface px-6 py-6"
+              >
+                <p className="font-mono text-3xl font-semibold text-gradient">
+                  {metric.value}
+                </p>
+                <p className="mt-1 text-sm text-muted">{metric.label[lang]}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      ) : null}
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16">
@@ -159,6 +166,7 @@ export default async function ProjectPage({
   );
 }
 
+/** Un apartado vacío no se pinta: así una ficha a medio llenar no deja huecos. */
 function Block({
   title,
   text,
@@ -168,6 +176,8 @@ function Block({
   text: string;
   highlight?: boolean;
 }) {
+  if (!text) return null;
+
   return (
     <Reveal className="flex flex-col gap-3">
       <h2 className="font-mono text-xs tracking-[0.2em] text-accent uppercase">{title}</h2>
@@ -185,11 +195,14 @@ function Block({
 }
 
 function Meta({ title, items }: { title: string; items: string[] }) {
+  const filled = items.filter(Boolean);
+  if (filled.length === 0) return null;
+
   return (
     <div className="flex flex-col gap-2">
       <h2 className="font-mono text-xs tracking-[0.2em] text-muted uppercase">{title}</h2>
       <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
-        {items.map((item) => (
+        {filled.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
